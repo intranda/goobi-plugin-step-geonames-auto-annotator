@@ -55,7 +55,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import de.sub.goobi.config.ConfigPlugins;
-import de.sub.goobi.helper.exceptions.DAOException;
 import de.sub.goobi.helper.exceptions.SwapException;
 import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
@@ -91,7 +90,7 @@ public class GeonamesautoannotatorStepPlugin implements IStepPluginVersion2 {
         allowTaskFinishButtons = myconfig.getBoolean("allowTaskFinishButtons", false);
         geonamesAccount = myconfig.getString("geonamesAccount", "testuser");
         geonamesApiUrl = myconfig.getString("geonamesApiUrl", "http://api.geonames.org");
-        geonamesCache = new HashMap<String, String>();
+        geonamesCache = new HashMap<>();
         log.info("Geonamesautoannotator step plugin initialized");
     }
 
@@ -145,7 +144,7 @@ public class GeonamesautoannotatorStepPlugin implements IStepPluginVersion2 {
         try {
             Path altoFolder = Paths.get(step.getProzess().getOcrAltoDirectory());
             enrichGeonames(altoFolder);
-        } catch (SwapException | DAOException | IOException | InterruptedException | JDOMException | URISyntaxException e) {
+        } catch (SwapException | IOException | InterruptedException | JDOMException | URISyntaxException e) {
             log.error(e);
             successful = false;
         }

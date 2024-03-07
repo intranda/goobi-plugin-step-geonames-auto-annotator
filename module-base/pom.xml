@@ -2,9 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>io.goobi.workflow.plugin</groupId>
-    <artifactId>plugin-step-geonamesautoannotator</artifactId>
+    <artifactId>plugin-step-geonames-auto-annotator</artifactId>
     <version>24.03-SNAPSHOT</version>
   </parent>
-  <artifactId>plugin-step-geonamesautoannotator-base</artifactId>
+  <artifactId>plugin-step-geonames-auto-annotator-base</artifactId>
   <packaging>jar</packaging>
 </project>

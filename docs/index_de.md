@@ -3,6 +3,10 @@ title: Automatische Geonames Annotierung
 identifier: intranda_step_geonamesautoannotator
 published: true
 description: Goobi Step Plugin für die Annotation automatisch vorhandener 'location' NER Tags in ALTO Dateien mit Geonames URLs.
+keywords:
+    - Goobi workflow
+    - Plugin
+    - Step Plugin
 ---
 ## Einführung
 Dieses Step Plugin für Goobi workflow annotiert automatisch vorhandene "location" NER Tags in ALTO Dateien mit Geonames URLs. Dabei wird immer der erste Treffer der Suchanfrage genommen. Es ist also empfehlenswert, die Ergebnisse noch einmal zu überprüfen und zu korrigieren.
